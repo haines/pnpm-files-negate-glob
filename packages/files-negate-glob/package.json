@@ -1,0 +1,11 @@
+{
+  "name": "files-negate-glob",
+  "version": "1.0.0",
+  "private": true,
+  "files": [
+    "one/two",
+    "!one/two/**/*.d.ts",
+    "three",
+    "!three/**/*.d.ts"
+  ]
+}

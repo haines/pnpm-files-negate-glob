@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+set -o errexit
+set -o nounset
+set -o pipefail
+
+printf "\e[32;1m==> pnpm deploy\e[0m\n\n"
+cd /app/dist/node_modules/files-negate-glob
+find -L -type f | sort
+
+printf "\n\n\e[32;1m==> pnpm pack\e[0m\n\n"
+cd /app/src/packages/files-negate-glob
+pnpm pack
+tar tf files-negate-glob-1.0.0.tgz | sort
+rm files-negate-glob-1.0.0.tgz
+
+printf "\n\n\e[32;1m==> npm pack\e[0m\n\n"
+npm pack --quiet
+tar tf files-negate-glob-1.0.0.tgz | sort

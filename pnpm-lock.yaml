@@ -1,0 +1,17 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .: {}
+
+  packages/app:
+    dependencies:
+      files-negate-glob:
+        specifier: workspace:*
+        version: link:../files-negate-glob
+
+  packages/files-negate-glob: {}

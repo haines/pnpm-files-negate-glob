@@ -1,0 +1,10 @@
+*
+
+!/packages/**/*.d.ts
+!/packages/**/*.js
+!/packages/*/package.json
+
+!/docker-entrypoint
+!/package.json
+!/pnpm-lock.yaml
+!/pnpm-workspace.yaml
